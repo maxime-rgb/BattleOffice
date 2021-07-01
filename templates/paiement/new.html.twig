@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Paiement{% endblock %}
+
+{% block body %}
+    <h1>Create new Paiement</h1>
+
+    {{ include('paiement/_form.html.twig') }}
+
+    <a href="{{ path('paiement_index') }}">back to list</a>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        let stripe = Stripe("pk_test_51IuwAFEHR08MdWvwKhCbOaT2odaZNHSwBQgUFgvb86dze0VxjuAAgTFdRF2k70jht1y4rsRNqnyhN9iXSRKkPPLw00bMYLfT5Y");
+        // The items the customer wants to buy
+        let elements = stripe.elements();
+
+        var style = {
+    base: {
+    // Add your base input styles here. For example:
+    fontSize: '16px',
+    color: '#32325d',
+    },
+    };
+
+    // Create an instance of the card Element.
+    var card = elements.create('card', {style: style});
+
+        // Add an instance of the card Element into the `card-element` <div>.
+    card.mount('#card-element');
+    </script>
+    {% endblock %}
+
