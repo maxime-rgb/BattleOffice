@@ -52,8 +52,14 @@ class __TwigTemplate_3ea1f6b8d0a47e0882e9c216c327975368e0f7044f70d250d65a75cd9ef
         <link  rel=\"icon\" type=\"image/x-icon\" href=\"favicon.png\" />
         <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">
         <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.5.0/css/all.css\" integrity=\"sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU\" crossorigin=\"anonymous\">
-        <link rel=\"stylesheet\" href=\"assets/css/main.css\">
-        <link rel=\"stylesheet\" href=\"assets/css/main_new.css\">
+        <link rel=\"stylesheet\" href=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/main.css"), "html", null, true);
+        echo "\">
+        <link rel=\"stylesheet\" href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/main_new.css"), "html", null, true);
+        echo "\">
 
         ";
         // line 13
@@ -66,7 +72,7 @@ class __TwigTemplate_3ea1f6b8d0a47e0882e9c216c327975368e0f7044f70d250d65a75cd9ef
                 <div class=\"nav-wrapper\">
                     <div class=\"row\">
                         <div class=\"col s12 m6\">
-                            <a href=\"#!\" class=\"brand-logo\">BattleOffice</a>
+                            <a href=\"http://battle-office.loc/\" class=\"brand-logo\">BattleOffice</a>
                         </div>
                         <div class=\"col s12 m6\">
                             <div class=\"picto-nav\">
@@ -101,6 +107,7 @@ class __TwigTemplate_3ea1f6b8d0a47e0882e9c216c327975368e0f7044f70d250d65a75cd9ef
                         <p class=\"color_brand_primary center-align\">
                             BattleOffice ne garantit pas la paix dans les bureaux et open-spaces. Il est déconseillé d'utiliser nos produits dans des espaces publiques. Ne déclenchez pas de guerres que vous regretteriez.
                         </p>
+                        
                     </div>
                 </div>
             </div>
@@ -110,14 +117,15 @@ class __TwigTemplate_3ea1f6b8d0a47e0882e9c216c327975368e0f7044f70d250d65a75cd9ef
                     <a class=\"color_brand_primary right\" href=\"#\" target=\"_blank\">Conditions Générales de Vente</a>
                 </div>
             </div>
+            
         </footer>
         <script src=\"https://js.stripe.com/v3/\"></script>
         <script src=\"assets/js/materialize.js\"></script>
         <script src=\"assets/js/main.js\"></script>
         ";
-        // line 66
+        // line 68
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 67
+        // line 69
         echo "    </body>
 </html>
 ";
@@ -165,7 +173,7 @@ class __TwigTemplate_3ea1f6b8d0a47e0882e9c216c327975368e0f7044f70d250d65a75cd9ef
 
     }
 
-    // line 66
+    // line 68
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -188,9 +196,14 @@ class __TwigTemplate_3ea1f6b8d0a47e0882e9c216c327975368e0f7044f70d250d65a75cd9ef
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  169 => 66,  151 => 42,  133 => 13,  121 => 67,  119 => 66,  94 => 43,  92 => 42,  62 => 14,  60 => 13,  46 => 1,);
+        return array (  177 => 68,  159 => 42,  141 => 13,  129 => 69,  127 => 68,  100 => 43,  98 => 42,  68 => 14,  66 => 13,  61 => 11,  57 => 10,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -204,8 +217,8 @@ class __TwigTemplate_3ea1f6b8d0a47e0882e9c216c327975368e0f7044f70d250d65a75cd9ef
         <link  rel=\"icon\" type=\"image/x-icon\" href=\"favicon.png\" />
         <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">
         <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.5.0/css/all.css\" integrity=\"sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU\" crossorigin=\"anonymous\">
-        <link rel=\"stylesheet\" href=\"assets/css/main.css\">
-        <link rel=\"stylesheet\" href=\"assets/css/main_new.css\">
+        <link rel=\"stylesheet\" href=\"{{asset('assets/css/main.css')}}\">
+        <link rel=\"stylesheet\" href=\"{{asset('assets/css/main_new.css')}}\">
 
         {% block stylesheets %}{% endblock %}
     </head>
@@ -215,7 +228,7 @@ class __TwigTemplate_3ea1f6b8d0a47e0882e9c216c327975368e0f7044f70d250d65a75cd9ef
                 <div class=\"nav-wrapper\">
                     <div class=\"row\">
                         <div class=\"col s12 m6\">
-                            <a href=\"#!\" class=\"brand-logo\">BattleOffice</a>
+                            <a href=\"http://battle-office.loc/\" class=\"brand-logo\">BattleOffice</a>
                         </div>
                         <div class=\"col s12 m6\">
                             <div class=\"picto-nav\">
@@ -247,6 +260,7 @@ class __TwigTemplate_3ea1f6b8d0a47e0882e9c216c327975368e0f7044f70d250d65a75cd9ef
                         <p class=\"color_brand_primary center-align\">
                             BattleOffice ne garantit pas la paix dans les bureaux et open-spaces. Il est déconseillé d'utiliser nos produits dans des espaces publiques. Ne déclenchez pas de guerres que vous regretteriez.
                         </p>
+                        
                     </div>
                 </div>
             </div>
@@ -256,6 +270,7 @@ class __TwigTemplate_3ea1f6b8d0a47e0882e9c216c327975368e0f7044f70d250d65a75cd9ef
                     <a class=\"color_brand_primary right\" href=\"#\" target=\"_blank\">Conditions Générales de Vente</a>
                 </div>
             </div>
+            
         </footer>
         <script src=\"https://js.stripe.com/v3/\"></script>
         <script src=\"assets/js/materialize.js\"></script>
@@ -263,6 +278,6 @@ class __TwigTemplate_3ea1f6b8d0a47e0882e9c216c327975368e0f7044f70d250d65a75cd9ef
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/home/simplon/devilbox/data/www/battle-office/templates/base.html.twig");
+", "base.html.twig", "/shared/httpd/battle-office/templates/base.html.twig");
     }
 }

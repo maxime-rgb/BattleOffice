@@ -12,10 +12,10 @@ class PaiementType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('paiementStatus')
-            ->add('method')
+
             ->add('paiementApi')
-            ->add('orders')
+            ->add('amount')
+      
         ;
     }
 

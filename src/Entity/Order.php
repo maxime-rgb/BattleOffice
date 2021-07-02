@@ -19,25 +19,19 @@ class Order
     private $id;
 
     /**
-     * @ORM\OneToOne(targetEntity=client::class, cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity=Client::class, cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $client;
 
     /**
-     * @ORM\ManyToOne(targetEntity=product::class)
+     * @ORM\ManyToOne(targetEntity=Product::class)
      * @ORM\JoinColumn(nullable=false)
      */
     private $product;
 
     /**
-     * @ORM\OneToOne(targetEntity=client::class, cascade={"persist", "remove"})
-     * @ORM\JoinColumn(nullable=true)
-     */
-    private $facturationAdress;
-
-    /**
-     * @ORM\OneToOne(targetEntity=deliveryAdress::class, cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity=DeliveryAdress::class, cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=true)
      */
     private $deliveryAdress;
@@ -67,18 +61,6 @@ class Order
     public function setProduct(?product $product): self
     {
         $this->product = $product;
-
-        return $this;
-    }
-
-    public function getFacturationAdress(): ?client
-    {
-        return $this->facturationAdress;
-    }
-
-    public function setFacturationAdress(client $facturationAdress): self
-    {
-        $this->facturationAdress = $facturationAdress;
 
         return $this;
     }

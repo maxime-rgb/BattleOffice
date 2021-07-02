@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Paiement{% endblock %}
+
+{% block body %}
+    <h1>Stripe Paiement</h1>
+
+
+<form method="post" class="paiementstripe" action="{{ path ('stripe', {'id': id})}}">
+        <div class="clearfix"></div>
+        <h5 class="center">Paiement CB</h5>
+        <div
+            class="input-field col s12">
+
+            {# TODO Mettre l'input du participant id à la place  #}
+            <input type="hidden" name="amount" value="{{amount}}">
+            <input type="hidden" name="paymentApi" value="{{paymentApi}}">
+            <input id="card_name" type="text" class="validate">
+            <label for="card_name">Nom sur la carte</label>
+        </div>
+        <div class="input-field col s12" id="card-element">
+            <input id="card_number" type="text" class="validate">
+            <label id="card-element" for="card_number">Numéro de la carte</label>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 l6">
+                <a href="#!" class="btn btn-large waves-effect waves-light grey col s12">Annuler</a>
+            </div>
+
+            <div class="input-field col s12 l6">
+                <button class="btn btn-large waves-effect waves-light lighten-1 col s12" type="submit" name="action">
+                    Payer
+                    <i class="material-icons right">euro_symbol</i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        let stripe = Stripe("pk_test_51IuwAFEHR08MdWvwKhCbOaT2odaZNHSwBQgUFgvb86dze0VxjuAAgTFdRF2k70jht1y4rsRNqnyhN9iXSRKkPPLw00bMYLfT5Y");
+        // The items the customer wants to buy
+        let elements = stripe.elements();
+
+        var style = {
+    base: {
+    // Add your base input styles here. For example:
+    fontSize: '16px',
+    color: '#32325d',
+    },
+    };
+
+    // Create an instance of the card Element.
+    var card = elements.create('card', {style: style});
+
+        // Add an instance of the card Element into the `card-element` <div>.
+    card.mount('#card-element');
+    </script>
+
+    
+{% endblock %}

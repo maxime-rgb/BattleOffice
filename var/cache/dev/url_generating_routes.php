@@ -27,6 +27,7 @@ return [
     'delivery_adress_delete' => [['id'], ['_controller' => 'App\\Controller\\DeliveryAdressController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/delivery/adress']], [], []],
     'landing_page' => [[], ['_controller' => 'App\\Controller\\LandingPageController::index'], [], [['text', '/']], [], []],
     'confirmation' => [[], ['_controller' => 'App\\Controller\\LandingPageController::confirmation'], [], [['text', '/confirmation']], [], []],
+    'stripe' => [['id'], ['_controller' => 'App\\Controller\\LandingPageController::stripe'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/stripe']], [], []],
     'order_index' => [[], ['_controller' => 'App\\Controller\\OrderController::index'], [], [['text', '/order/']], [], []],
     'order_new' => [[], ['_controller' => 'App\\Controller\\OrderController::new'], [], [['text', '/order/new']], [], []],
     'order_show' => [['id'], ['_controller' => 'App\\Controller\\OrderController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/order']], [], []],

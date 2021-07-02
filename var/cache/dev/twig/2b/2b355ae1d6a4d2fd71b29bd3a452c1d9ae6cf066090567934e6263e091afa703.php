@@ -292,7 +292,7 @@ class __TwigTemplate_0af63906bf3dc65eaefca434186b0dc1101a22f5a5265f26a86e466e3be
                     <div class=\"row\">
 
                         <div class=\"center-align\">
-                            <button type=\"submit\"  name=\"order[payment_method]\" value=\"lpmonetico\" class=\"btn-large btn-block waves-effect waves-light\">Continuer</button>
+                            <button type=\"submit\"  name=\"method\" value=\"stripe\" class=\"btn-large btn-block waves-effect waves-light\">Continuer</button>
                             <p>J'accepte les <a href=\"https://feelwellshop.com/fr/conditions-generales-de-ventes\" target=\"_blank\">conditions générales de vente</a></p>
                             <img class=\"responsive-img monetico\" src=\"assets/images/paiement-securise-stripe.jpeg\" alt=\"Stripe protège vos achats\">
                         </div>
@@ -305,7 +305,7 @@ class __TwigTemplate_0af63906bf3dc65eaefca434186b0dc1101a22f5a5265f26a86e466e3be
                 <div class=\"collapsible-body\">
                     <div class=\"row\">
                         <div class=\"center-align\">
-                            <button type=\"submit\" name=\"order[payment_method]\" value=\"lppaypal\" class=\"btn-large btn-block waves-effect waves-light\">Continuer sur PayPal</button>
+                            <button type=\"submit\" name=\"method\" value=\"paypal\" class=\"btn-large btn-block waves-effect waves-light\">Continuer sur PayPal</button>
                             <p>J'accepte les <a href=\"https://feelwellshop.com/fr/conditions-generales-de-ventes\" target=\"_blank\">conditions générales de vente</a></p>
                         </div>
                     </div>
@@ -481,7 +481,7 @@ class __TwigTemplate_0af63906bf3dc65eaefca434186b0dc1101a22f5a5265f26a86e466e3be
                     <div class=\"row\">
 
                         <div class=\"center-align\">
-                            <button type=\"submit\"  name=\"order[payment_method]\" value=\"lpmonetico\" class=\"btn-large btn-block waves-effect waves-light\">Continuer</button>
+                            <button type=\"submit\"  name=\"method\" value=\"stripe\" class=\"btn-large btn-block waves-effect waves-light\">Continuer</button>
                             <p>J'accepte les <a href=\"https://feelwellshop.com/fr/conditions-generales-de-ventes\" target=\"_blank\">conditions générales de vente</a></p>
                             <img class=\"responsive-img monetico\" src=\"assets/images/paiement-securise-stripe.jpeg\" alt=\"Stripe protège vos achats\">
                         </div>
@@ -494,7 +494,7 @@ class __TwigTemplate_0af63906bf3dc65eaefca434186b0dc1101a22f5a5265f26a86e466e3be
                 <div class=\"collapsible-body\">
                     <div class=\"row\">
                         <div class=\"center-align\">
-                            <button type=\"submit\" name=\"order[payment_method]\" value=\"lppaypal\" class=\"btn-large btn-block waves-effect waves-light\">Continuer sur PayPal</button>
+                            <button type=\"submit\" name=\"method\" value=\"paypal\" class=\"btn-large btn-block waves-effect waves-light\">Continuer sur PayPal</button>
                             <p>J'accepte les <a href=\"https://feelwellshop.com/fr/conditions-generales-de-ventes\" target=\"_blank\">conditions générales de vente</a></p>
                         </div>
                     </div>
@@ -503,6 +503,6 @@ class __TwigTemplate_0af63906bf3dc65eaefca434186b0dc1101a22f5a5265f26a86e466e3be
         </ul>
     </div>
 </div>
-{{ form_widget(form._token) }}", "landing_page/partials/form_new.html.twig", "/home/simplon/devilbox/data/www/battle-office/templates/landing_page/partials/form_new.html.twig");
+{{ form_widget(form._token) }}", "landing_page/partials/form_new.html.twig", "/shared/httpd/battle-office/templates/landing_page/partials/form_new.html.twig");
     }
 }

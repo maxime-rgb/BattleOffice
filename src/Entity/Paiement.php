@@ -38,6 +38,11 @@ class Paiement
      */
     private $paiementApi;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $amount;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -87,6 +92,18 @@ class Paiement
     public function setPaiementApi(int $paiementApi): self
     {
         $this->paiementApi = $paiementApi;
+
+        return $this;
+    }
+
+    public function getAmount(): ?int
+    {
+        return $this->amount;
+    }
+
+    public function setAmount(int $amount): self
+    {
+        $this->amount = $amount;
 
         return $this;
     }

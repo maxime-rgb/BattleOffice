@@ -30,7 +30,7 @@ class InstalledVersions
     'aliases' => 
     array (
     ),
-    'reference' => '47bf56e02ac7ddba93901b46269b66204540411d',
+    'reference' => 'a81454ceb6569c460da03a003c76190965de1e0c',
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ class InstalledVersions
       'aliases' => 
       array (
       ),
-      'reference' => '47bf56e02ac7ddba93901b46269b66204540411d',
+      'reference' => 'a81454ceb6569c460da03a003c76190965de1e0c',
     ),
     'composer/package-versions-deprecated' => 
     array (
@@ -728,12 +728,12 @@ class InstalledVersions
     ),
     'symfony/mailer' => 
     array (
-      'pretty_version' => 'v5.2.7',
-      'version' => '5.2.7.0',
+      'pretty_version' => 'v5.2.11',
+      'version' => '5.2.11.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c50b304246e56c8574c203bce440f0eafb107ae9',
+      'reference' => '3f357d259cfb7928823f314766a44f4f9e49f682',
     ),
     'symfony/maker-bundle' => 
     array (
@@ -980,6 +980,15 @@ class InstalledVersions
       array (
       ),
       'reference' => 'cc02ba30c8e721704202489f6e7963339a367e37',
+    ),
+    'symfony/sendgrid-mailer' => 
+    array (
+      'pretty_version' => 'v5.2.10',
+      'version' => '5.2.10.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f81b77fa0474560695fed3070f51d98dacf83c73',
     ),
     'symfony/serializer' => 
     array (

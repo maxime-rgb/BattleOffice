@@ -53,21 +53,22 @@ return [
                     .'|/edit(*:259)'
                     .'|(*:267)'
                 .')'
+                .'|/stripe/([^/]++)(*:292)'
                 .'|/order/([^/]++)(?'
-                    .'|(*:294)'
-                    .'|/edit(*:307)'
-                    .'|(*:315)'
+                    .'|(*:318)'
+                    .'|/edit(*:331)'
+                    .'|(*:339)'
                 .')'
                 .'|/p(?'
                     .'|aiement/([^/]++)(?'
-                        .'|(*:348)'
-                        .'|/edit(*:361)'
-                        .'|(*:369)'
+                        .'|(*:372)'
+                        .'|/edit(*:385)'
+                        .'|(*:393)'
                     .')'
                     .'|roduct/([^/]++)(?'
-                        .'|(*:396)'
-                        .'|/edit(*:409)'
-                        .'|(*:417)'
+                        .'|(*:420)'
+                        .'|/edit(*:433)'
+                        .'|(*:441)'
                     .')'
                 .')'
             .')/?$}sDu',
@@ -86,15 +87,16 @@ return [
         246 => [[['_route' => 'delivery_adress_show', '_controller' => 'App\\Controller\\DeliveryAdressController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         259 => [[['_route' => 'delivery_adress_edit', '_controller' => 'App\\Controller\\DeliveryAdressController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         267 => [[['_route' => 'delivery_adress_delete', '_controller' => 'App\\Controller\\DeliveryAdressController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        294 => [[['_route' => 'order_show', '_controller' => 'App\\Controller\\OrderController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        307 => [[['_route' => 'order_edit', '_controller' => 'App\\Controller\\OrderController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        315 => [[['_route' => 'order_delete', '_controller' => 'App\\Controller\\OrderController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        348 => [[['_route' => 'paiement_show', '_controller' => 'App\\Controller\\PaiementController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        361 => [[['_route' => 'paiement_edit', '_controller' => 'App\\Controller\\PaiementController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        369 => [[['_route' => 'paiement_delete', '_controller' => 'App\\Controller\\PaiementController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        396 => [[['_route' => 'product_show', '_controller' => 'App\\Controller\\ProductController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        409 => [[['_route' => 'product_edit', '_controller' => 'App\\Controller\\ProductController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        417 => [
+        292 => [[['_route' => 'stripe', '_controller' => 'App\\Controller\\LandingPageController::stripe'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        318 => [[['_route' => 'order_show', '_controller' => 'App\\Controller\\OrderController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        331 => [[['_route' => 'order_edit', '_controller' => 'App\\Controller\\OrderController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        339 => [[['_route' => 'order_delete', '_controller' => 'App\\Controller\\OrderController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        372 => [[['_route' => 'paiement_show', '_controller' => 'App\\Controller\\PaiementController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        385 => [[['_route' => 'paiement_edit', '_controller' => 'App\\Controller\\PaiementController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        393 => [[['_route' => 'paiement_delete', '_controller' => 'App\\Controller\\PaiementController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        420 => [[['_route' => 'product_show', '_controller' => 'App\\Controller\\ProductController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        433 => [[['_route' => 'product_edit', '_controller' => 'App\\Controller\\ProductController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        441 => [
             [['_route' => 'product_delete', '_controller' => 'App\\Controller\\ProductController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
